@@ -6,7 +6,7 @@
 //#include "code/9_15.h"
 //#include "algospot/restore.h"
 //#include "week-1/4375.h"
-#include "solved_ac/2675.h"
+#include "solved_ac/marathon/3/9298.h"
 
 
 
@@ -15,7 +15,7 @@ int main() {
 
 //    solve();
 
-    p_2675();
+    p_9298();
 
     return 0;
 
