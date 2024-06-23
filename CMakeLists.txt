@@ -14,4 +14,5 @@ add_executable(untitled
         week-1/2309.h
         solved_ac/1260.h
         solved_ac/30087.h
+        solved_ac/marathon/3/25305.h
 )
