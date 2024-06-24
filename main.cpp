@@ -4,18 +4,20 @@
 
 //#include "swexpertacademy.h"
 //#include "code/9_15.h"
-//#include "algospot/restore.h"
+#include "algospot/numbergame.h"
 //#include "week-1/4375.h"
+//#include "solved_ac/2739.h"
 
 
-
-#include "solved_ac/marathon/3/3049.h"
+//#include "solved_ac/marathon/3/3049.h"
 
 int main() {
 
 //    solve();
 
-    p_3049();
+//    p_2739();
+
+    numbergame();
 
     return 0;
 
