@@ -4,9 +4,9 @@
 
 //#include "swexpertacademy.h"
 //#include "code/9_15.h"
-#include "algospot/numbergame.h"
+//#include "algospot/blockgame.h"
 //#include "week-1/4375.h"
-//#include "solved_ac/2739.h"
+#include "solved_ac/10818.h"
 
 
 //#include "solved_ac/marathon/3/3049.h"
@@ -15,9 +15,9 @@ int main() {
 
 //    solve();
 
-//    p_2739();
+    p_10818();
 
-    numbergame();
+//    blockgame();
 
     return 0;
 
