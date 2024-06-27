@@ -18,4 +18,7 @@ add_executable(untitled
         algospot/tictactoe.h
         algospot/numbergame.h
         solved_ac/marathon/4/25991.h
+        swea/d2/두개의숫자열.h
+        swea/d2/숫자배열회전.h
+        swea/d2/파리퇴치3.h
 )

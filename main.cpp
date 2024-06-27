@@ -6,7 +6,8 @@
 //#include "code/9_15.h"
 //#include "algospot/blockgame.h"
 //#include "week-1/4375.h"
-#include "solved_ac/marathon/4/25991.h"
+// #include "solved_ac/marathon/4/25991.h"
+#include "swea/d2/파리퇴치3.h"
 
 
 //#include "solved_ac/marathon/3/3049.h"
@@ -15,9 +16,11 @@ int main() {
 
 //    solve();
 
-    p_25991();
+    // p_25991();
 
 //    blockgame();
+
+    파리퇴치3();
 
     return 0;
 
