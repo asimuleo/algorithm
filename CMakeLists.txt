@@ -17,4 +17,5 @@ add_executable(untitled
         solved_ac/marathon/3/25305.h
         algospot/tictactoe.h
         algospot/numbergame.h
+        solved_ac/marathon/4/25991.h
 )
