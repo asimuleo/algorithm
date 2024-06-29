@@ -21,4 +21,8 @@ add_executable(untitled
         swea/d2/두개의숫자열.h
         swea/d2/숫자배열회전.h
         swea/d2/파리퇴치3.h
+        solved_ac/marathon/4/7567.h
+        swea/d4/수영대회결승전.h
+        swea/d4/장훈이의높은선반.h
+        swea/d4/파핑파핑지뢰찾기.h
 )
