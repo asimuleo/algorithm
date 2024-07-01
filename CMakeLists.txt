@@ -25,4 +25,5 @@ add_executable(untitled
         swea/d4/수영대회결승전.h
         swea/d4/장훈이의높은선반.h
         swea/d4/파핑파핑지뢰찾기.h
+        solved_ac/marathon/4/2930.h
 )
