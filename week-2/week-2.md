@@ -1,5 +1,5 @@
 ● 2 - A : 2178 – http://boj.kr/2f0e1a0d5eab489dac865b3ee7e0fa80 완탐 실패 -> bfs 성공 </br> 
-● 2 - B : 1012 - http://boj.kr/c2c09d04946f4cc6844f295e38553ca6 </br>
+● 2 - B : 1012 - http://boj.kr/c2c09d04946f4cc6844f295e38553ca6 bfs 성공 </br>
 ● 2 - C : 2468 - http://boj.kr/cf2c8a947f5041b69efd55961657526c </br>
 ● 2 - D : 2583 - http://boj.kr/e94fb8e43b714794a0950505c0091594 </br>
 ● 2 - E : 1992 - http://boj.kr/f833f244536f48fa960ea96f9b5a35fb </br>
