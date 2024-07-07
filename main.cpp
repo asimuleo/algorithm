@@ -6,7 +6,7 @@
 //#include "code/9_15.h"
 //#include "algospot/blockgame.h"
 //#include "week-1/4375.h"
-#include "solved_ac/marathon/4/29724.h"
+#include "solved_ac/marathon/5/12607.h"
 // #include "swea/d4/장훈이의높은선반.h"
 
 
@@ -16,7 +16,7 @@ int main() {
 
 //    solve();
 
-    p_29724();
+    p_12607();
 
 //    blockgame();
 
