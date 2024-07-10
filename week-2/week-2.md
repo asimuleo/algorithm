@@ -2,7 +2,7 @@
 ● 2 - B : 1012 - http://boj.kr/c2c09d04946f4cc6844f295e38553ca6 bfs 성공 </br>
 ● 2 - C : 2468 - http://boj.kr/cf2c8a947f5041b69efd55961657526c bfs 성공 </br>
 ● 2 - D : 2583 - http://boj.kr/e94fb8e43b714794a0950505c0091594 bfs 성공 </br>
-● 2 - E : 1992 - http://boj.kr/f833f244536f48fa960ea96f9b5a35fb </br>
+● 2 - E : 1992 - http://boj.kr/f833f244536f48fa960ea96f9b5a35fb bfs 성공 (솔직히 왜 bfs로 풀어야하는 문제인지는 모르겠다.) </br>
 ● 2 - F : 2828 - http://boj.kr/fdee73d789cf421db0e71ad9d332cb4a </br>
 ● 2 - G : 2910 - http://boj.kr/5abff43b14d0489aac5c48a0a717c1a8 </br>
 ● 2 - H : 4659 - http://boj.kr/e531e15e4f3b4d828f8295934feafd07 </br>
