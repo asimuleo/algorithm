@@ -4,16 +4,16 @@ project(untitled)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(untitled
-        code/9_14.h
+        문제해결전략/9_14.h
         swexpertacademy.h
         main.cpp
-        code/9_15.h
+        문제해결전략/9_15.h
         algospot/restore.h
-        code/9_16.h
-        code/9_17.h
-        week-1/2309.h
-        solved_ac/1260.h
-        solved_ac/30087.h
+        문제해결전략/9_16.h
+        문제해결전략/9_17.h
+        큰돌/week-1/2309.h
+        solved_ac/marathon/class/1260.h
+        solved_ac/marathon/class/30087.h
         solved_ac/marathon/3/25305.h
         algospot/tictactoe.h
         algospot/numbergame.h
@@ -26,4 +26,16 @@ add_executable(untitled
         swea/d4/장훈이의높은선반.h
         swea/d4/파핑파핑지뢰찾기.h
         solved_ac/marathon/4/2930.h
+        큰돌/week-2/10709.h
+        큰돌/week-2/3474.h
+        큰돌/week-2/2852.h
+        큰돌/week-2/1436.h
+        큰돌/week-2/9012.h
+        solved_ac/marathon/6/30791.h
+        programmers/67257.h
+        큰돌/week-2/4949.h
+        큰돌/week-2/14502.h
+        solved_ac/marathon/6/5063.h
+        solved_ac/marathon/6/6811.h
+        solved_ac/marathon/6/26416.h
 )
