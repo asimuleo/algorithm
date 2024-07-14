@@ -39,4 +39,7 @@ add_executable(untitled
         solved_ac/marathon/6/6811.h
         solved_ac/marathon/6/26416.h
         큰돌/week-2/2636.h
+        큰돌/week-2/1068.h
+        큰돌/week-2/1325.h
+        solved_ac/marathon/6/1894.h
 )

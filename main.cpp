@@ -6,9 +6,9 @@
 //#include "문제해결전략/9_15.h"
 //#include "algospot/blockgame.h"
 //#include "week-1/4375.h"
-//#include "solved_ac/marathon/5/12607.h"
+#include "solved_ac/marathon/6/1894.h"
 // #include "swea/d4/장훈이의높은선반.h"
-#include "큰돌/week-2/2636.h"
+//#include "큰돌/week-2/1325.h"
 
 
 //#include "solved_ac/marathon/3/3049.h"
@@ -17,7 +17,7 @@ int main() {
 
 //    solve();
 
-    p_2636();
+    p_1894();
 
 //    blockgame();
 
