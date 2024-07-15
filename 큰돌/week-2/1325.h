@@ -1,5 +1,5 @@
 //
-// Created by 임혁 on 24. 7. 13.
+// Created by 임혁 on 24. 7. 15.
 //
 
 #include <cstdio>
@@ -12,6 +12,7 @@
 #include <map>
 #include <stack>
 #include <sstream>
+#include <cstring>
 
 using namespace std;
 
@@ -24,28 +25,25 @@ struct computer {
 
 
 // 해당 컴퓨터가 해킹되었을 시 해킹되는 컴퓨터의 수를 반환한다.
-int hack(vector<computer> &computer_list, vector<bool> &visited, vector<int> &hacked, int num) {
+int hack(vector<computer> &computer_list, vector<bool> &visited, int num) {
 
-    if (computer_list[num].trusted.empty()) {
+    vector<computer *> &trusted = computer_list[num].trusted;
+    visited[num] = true;
+
+    if (trusted.empty()) {
         return 1;
     }
 
-    int &ret = hacked[num];
-
-    if (ret != -1)
-        return ret;
-
-    visited[num] = true;
-
-    int sum = 1;
+    // 나 자신도 포함
+    int ret =1;
 
     // 신뢰하는 컴퓨터들
-    for (int i = 0; i < computer_list[num].trusted.size(); ++i) {
-        if (visited[computer_list[num].trusted[i]->num]) continue;
-        sum += hack(computer_list, visited, hacked, computer_list[num].trusted[i]->num);
+    for (auto & i : trusted) {
+        if (visited[i->num]) continue;
+        ret += hack(computer_list, visited, i->num);
     }
 
-    return ret = sum;
+    return ret;
 }
 
 void p_1325() {
@@ -70,13 +68,13 @@ void p_1325() {
         computer_list[b - 1].trusted.push_back(&computer_list[a - 1]);
     }
 
-    vector<int> hacked(N, -1);
+    vector<int> hacked(N, 1);
 
     int max_hacked = 1;
 
     for (int i = 0; i < N; ++i) {
         vector<bool> visited(N, false);
-        hacked[i] = hack(computer_list, visited, hacked, i);
+        hacked[i] = hack(computer_list, visited, i);
         max_hacked = max(max_hacked, hacked[i]);
 
     }
