@@ -46,4 +46,7 @@ add_executable(untitled
         백준/1253.h
         solved_ac/marathon/6/24313.h
         백준/17626.h
+        큰돌/week-2/2178.h
+        백준/1389.h
+        백준/1074.h
 )
