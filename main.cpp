@@ -9,7 +9,7 @@
 // #include "solved_ac/marathon/6/1812.h"
 // #include "swea/d4/장훈이의높은선반.h"
 // #include "큰돌/week-2/17298.h"
-#include "백준/123123123.h"
+#include "백준/6064.h"
 
 
 //#include "solved_ac/marathon/3/3049.h"
@@ -18,7 +18,7 @@ int main() {
 
 //    solve();
 
-    p_123123123();
+    p_6064();
 
 //    blockgame();
 
