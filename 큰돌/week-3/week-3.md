@@ -1,9 +1,9 @@
-● 3 - A : 15686 - http://boj.kr/5b5feb84a65f44c19188df5fbe697fe6 <br/>
-● 3 - B : 2589 - http://boj.kr/189c72950ded47cebd40f73d2a368be3 <br/>
-● 3 - C : 16234 - http://boj.kr/5d7d83e1069547288f02236c01cc8d5a <br/>
-● 3 - D : 4179 - http://boj.kr/d9a60c043e7d428bac7374f83c5ca09d <br/>
-● 3 - E : 12869 - http://boj.kr/69448cd6c1b24fb193bc7564c7b1d5b0 <br/>
-● 3 - F : 16637 - http://boj.kr/b9ba29f807a2445f901edce77df4ad01 <br/>
+● 3 - A : 15686 - http://boj.kr/5b5feb84a65f44c19188df5fbe697fe6  완탐으로 첫트 해결!<br/>
+● 3 - B : 2589 - http://boj.kr/189c72950ded47cebd40f73d2a368be3 완탐 bfs 로 첫트 해결!<br/>
+● 3 - C : 16234 - http://boj.kr/5d7d83e1069547288f02236c01cc8d5a 완탐 bfs 로 첫트 해결!<br/>
+● 3 - D : 4179 - http://boj.kr/d9a60c043e7d428bac7374f83c5ca09d 완탐을 각각 적용한 특별한 문제! 불이 어려개인걸 파악못해서 좀 틀렸다.<br/>
+● 3 - E : 12869 - http://boj.kr/69448cd6c1b24fb193bc7564c7b1d5b0 와... 대박문제... 나는 dp로 풀었는데, dfs 로 풀 수 있는 대박 문제였다... 발상의 전환...<br/>
+● 3 - F : 16637 - http://boj.kr/b9ba29f807a2445f901edce77df4ad01 이런 문제를 누적합이라고 하는구나 하는 걸 꺠달았다. 나는 그냥 재귀를 짜서 첫트 성공했다.<br/>
 ● 3 - G : 12851 - http://boj.kr/6733d00393ba47a98811a8ff3eb6c643 <br/>
 ● 3 - H : 13913 - http://boj.kr/69f8a56f74744fbfb766bbc5fef23a79 <br/>
 ● 3 - I : 17071 - http://boj.kr/c21e35e4db3143cc9f1e809d10f6eb86 <br/>
