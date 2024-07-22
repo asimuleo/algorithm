@@ -21,6 +21,7 @@ int N, K;
 int ret_time;
 int ret_cnt;
 
+int bfs_visited[100001];
 bool visited2[100001];
 
 // v를반환
@@ -36,12 +37,11 @@ int way(int w, int u) {
 }
 
 int bfs() {
-    int visited[100001];
-    memset(visited, -1, sizeof(visited));
+    memset(bfs_visited, -1, sizeof(bfs_visited));
 
     queue<int> q;
     q.push(N);
-    visited[N] = 0;
+    bfs_visited[N] = 0;
 
     while (!q.empty()) {
         int u = q.front();
@@ -50,11 +50,11 @@ int bfs() {
         for (int i = 0; i < 3; ++i) {
             int v = way(i, u);
             if (v < 0 || v > 100000) continue; // 범위를 벗어난다면 제외
-            if (visited[v] != -1) continue; // 방문했다면 제외
+            if (bfs_visited[v] != -1) continue; // 방문했다면 제외
             if (v == K) {
-                return visited[u] + 1;
+                return bfs_visited[u] + 1;
             }
-            visited[v] = visited[u] + 1;
+            bfs_visited[v] = bfs_visited[u] + 1;
             q.push(v);
         }
     }
@@ -72,6 +72,21 @@ int dfs(int position, int step) {
         return 0;
     }
 
+    if (bfs_visited[position] == -1) return 0; // bfs 로 방문 안한 곳은 제외시킨다.
+
+
+    // 만약 아무리 step 만큼 진행시켜도 도달하지 못할 것이라면 제외시킨다.
+    if (ret_time - step < 17 && (position + 1) * pow(2, ret_time - step) < K)
+        return 0;
+
+    // 솔직히 -1을 N보다 작은 방향으로 2번 하는건 아닌 것 같은데...
+    if (position < N - 1)
+        return 0;
+
+    // 곱하기 횟수도 제한할 수 있지 않을까?
+
+
+
     int sum = 0;
 
     for (int i = 0; i < 3; ++i) {
@@ -84,12 +99,15 @@ int dfs(int position, int step) {
     }
 
     return sum;
-
 }
 
 void p_12851() {
-
     cin >> N >> K;
+
+    if (N > K) {
+        cout << N - K << '\n' << 1;
+        return;
+    }
 
     if (N == K) {
         cout << 0 << '\n' << 0;
@@ -106,8 +124,8 @@ void p_12851() {
 
     memset(visited2, false, sizeof(visited2));
     visited2[N] = true;
+
+    // dfs 를 bfs 로 방문한 곳만 하면 시간을 획기적으로 줄일 수 있지 않을까?
     ret_cnt = dfs(N, 0);
     cout << ret_cnt;
-
-
 }
