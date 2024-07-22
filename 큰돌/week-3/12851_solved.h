@@ -41,7 +41,7 @@ void p_12851_3() {
     visited[N] = 0;
 
     if (N == K) {
-        cout << 0 << '\n' << 0;
+        cout << 0 << '\n' << 1;
         return;
     }
 

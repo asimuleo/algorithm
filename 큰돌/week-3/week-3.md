@@ -4,8 +4,8 @@
 ● 3 - D : 4179 - http://boj.kr/d9a60c043e7d428bac7374f83c5ca09d 완탐을 각각 적용한 특별한 문제! 불이 어려개인걸 파악못해서 좀 틀렸다.<br/>
 ● 3 - E : 12869 - http://boj.kr/69448cd6c1b24fb193bc7564c7b1d5b0 와... 대박문제... 나는 dp로 풀었는데, dfs 로 풀 수 있는 대박 문제였다... 발상의 전환...<br/>
 ● 3 - F : 16637 - http://boj.kr/b9ba29f807a2445f901edce77df4ad01 이런 문제를 누적합이라고 하는구나 하는 걸 꺠달았다. 나는 그냥 재귀를 짜서 첫트 성공했다.<br/>
-● 3 - G : 12851 - http://boj.kr/6733d00393ba47a98811a8ff3eb6c643 <br/>
-● 3 - H : 13913 - http://boj.kr/69f8a56f74744fbfb766bbc5fef23a79 <br/>
+● 3 - G : 12851 - http://boj.kr/6733d00393ba47a98811a8ff3eb6c643 visited의 틀을 꺠는 문제. 2일만에 풀었따..<br/>
+● 3 - H : 13913 - http://boj.kr/69f8a56f74744fbfb766bbc5fef23a79 경로 트래킹을 위한 새로운 배열 <br/>
 ● 3 - I : 17071 - http://boj.kr/c21e35e4db3143cc9f1e809d10f6eb86 <br/>
 ● 3 - J : 14497 - http://boj.kr/d5e9b736ccc643fcb10a5351b836faa6 <br/>
 ● 3 - K : 3197 - http://boj.kr/eff8e537e2a747a588d33e78d438bde0 <br/>
