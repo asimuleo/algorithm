@@ -54,7 +54,7 @@ add_executable(untitled
         백준/실버/6064.h
         백준/실버/9465.h
         백준/플레/5373.h
-        백준/브론즈/29863.h
+        solved_ac/marathon/7/29863.h
         큰돌/week-3/15686.h
         큰돌/week-3/2589.h
         큰돌/week-3/16234.h
@@ -62,4 +62,6 @@ add_executable(untitled
         큰돌/week-3/16637.h
         큰돌/week-3/12851.h
         큰돌/week-3/9019.h
+        solved_ac/marathon/7/27566.h
+        solved_ac/marathon/7/15829.h
 )
