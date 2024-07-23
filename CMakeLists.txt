@@ -62,4 +62,6 @@ add_executable(untitled
         큰돌/week-3/16637.h
         큰돌/week-3/12851.h
         큰돌/week-3/9019.h
+        백준/실버/14469.h
+        백준/골드/2812.h
 )
