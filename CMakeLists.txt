@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(untitled
         main.cpp
+        백준/골드/23290.h
 )
