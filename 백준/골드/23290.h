@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cmath>
 #include <string>
-#include <queue>
+#include <cstring>
 #include <sstream>
 
 using namespace std;
@@ -142,7 +142,7 @@ void move_fish() {
             f.x = nx;
             f.d = d;
 
-            return;
+            break;
 
         }
     }
@@ -199,8 +199,6 @@ void move_magician() {
 
     vector<int> way = it->first;
 
-    cout << way[0] << way[1] << way[2] << endl;
-
     int t3x = dx[way[2]];
     int t3y = dy[way[2]];
     int t2x = dx[way[1]];
@@ -213,8 +211,7 @@ void move_magician() {
     // 물고기 제거 & 냄새 남기기
 
     for (auto &f: fishes) {
-        if ((f.x == megi.x && f.y == megi.y)
-            || (f.x == megi.x + t1x && f.y == megi.y + t1y)
+        if ( (f.x == megi.x + t1x && f.y == megi.y + t1y)
             || (f.x == megi.x + t1x + t2x && f.y == megi.y + t1y + t2y)
             || (f.x == megi.x + t1x + t2x + t3x && f.y == megi.y + t1y + t2y + t3y)) {
             smell[f.y][f.x] = 0; // 냄새 남기기
@@ -264,12 +261,16 @@ void turn_end() {
     }
 }
 
-
+/**
+ * 법사 상어 풀떄 주의점
+ * 1. 법사가 이동할 때 시작 위치의 물고기는 먹지 않는다.
+ * 2. 법사는 같은 곳을 여러번 방문 가능하다.
+ */
 void p_23290() {
     init();
 
     while (S-- > 0) {
-        cout << S << endl;
+        // cout << S << endl;
         remember_fish();
         move_fish();
         //cout << "물고기 이동" << endl;
@@ -282,10 +283,10 @@ void p_23290() {
         //printSmell();
         copying_fish();
         //cout << "물고기 복제" << endl;
-        printBoard();
+        // printBoard();
         turn_end();
         //cout << "냄새 시간 추가" << endl;
-        printSmell();
+        // printSmell();
 
 //        cout << megi.y << ':' << megi.x << endl;
 //        cout << fishes.size() << endl;
