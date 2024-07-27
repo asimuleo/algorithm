@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(untitled
         main.cpp
-        백준/골드/1753.h
+        solved_ac/marathon/8/14530.h
 )
