@@ -17,34 +17,46 @@
 using namespace std;
 
 void p_14530() {
-    int total_distance = 0;
 
     int x, y;
     cin >> x >> y;
 
-    int step = 0;
+    int step = 1;
 
+    int total_distance = 0;
 
-    while (abs(x - y) > pow(2, step++)) {
-    }
+    int current_position = x;
 
-    if (step % 2 == 0) {
-        step++;
-    }
+    bool positive = true;
 
-    for (int i = 0; i < step; ++i) {
-        if (i % 2 == 0 && x - i < 0) {
-            total_distance += x * 2;
-            continue;
+    while (true) {
+
+        if (positive) {
+            // step 이 다할 때 까지 이동한다.
+            for (int i = current_position; i < x + step; ++i) {
+                current_position++; // 현재 위치 증가
+                total_distance++; // 총 거리 증가
+                if (current_position == y) {
+                    cout << total_distance;
+                    return;
+                }
+            }
+        } else {
+            // step 이 다할 때 까지 이동한다.
+            for (int i = current_position; i > x - step; --i) {
+                current_position--; // 현재 위치 증가
+                total_distance++; // 총 거리 증가
+                if (current_position == y) {
+                    cout << total_distance;
+                    return;
+                }
+            }
         }
-        if (i % 2 == 1 && x + i > 1000) {
-            total_distance += (1000 - x) * 2;
-            continue;
-        }
-        total_distance += i * 2;
+
+        positive = !positive;
+        step *= 2;
+
     }
 
-    total_distance += abs(x - y);
 
-    cout << total_distance;
 }
