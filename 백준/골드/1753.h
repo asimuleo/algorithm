@@ -60,16 +60,15 @@ void dijkstra() {
 
     // 2. 현재 노드를 나타내는 변수 A에 출발 노드의 번호를 저장한다.
     Q.push(node_list[S]);
-    node *A = Q.top();
 
-    while (true) {
+
+    while (!Q.empty()) {
         // 3. A로부터 갈 수 있는 임의의 노드 B에 대해, d[A] + P[A][B]와 d[B]의 값을 비교한다.
         // INF와 비교할 경우 무조건 전자가 작다.
+        node *A = Q.top();
 
         for (auto &B: A->children) {
             // 5. A의 모든 이웃 노드 B에 대해 이 작업을 수행한다.
-            if (B.second->visited)
-                continue;
 
             int &distance = B.second->distance;
             int weight = B.first;
@@ -90,10 +89,6 @@ void dijkstra() {
         Q.pop();
         // 7. "미방문" 상태인 모든 노드들 중,
         // 출발점으로부터의 거리가 제일 짧은 노드 하나를 골라서 그 노드를 A에 저장한다.
-        if (Q.empty()) {
-            break;
-        }
-        A = Q.top();
     }
 
 
@@ -166,3 +161,16 @@ void p_1753() {
     dijkstra();
 
 }
+
+
+// 6 9
+// 1
+// 1 2 10
+// 1 3 30
+// 1 4 15
+// 2 5 20
+// 5 6 20
+// 3 6 5
+// 6 4 20
+// 4 6 20
+// 4 3 5
