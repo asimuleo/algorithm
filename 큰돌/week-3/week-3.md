@@ -7,7 +7,7 @@
 ● 3 - G : 12851 - http://boj.kr/6733d00393ba47a98811a8ff3eb6c643 visited의 틀을 꺠는 문제. 2일만에 풀었따..<br/>
 ● 3 - H : 13913 - http://boj.kr/69f8a56f74744fbfb766bbc5fef23a79 경로 트래킹을 위한 새로운 배열 <br/>
 ● 3 - I : 17071 - http://boj.kr/c21e35e4db3143cc9f1e809d10f6eb86 <br/>
-● 3 - J : 14497 - http://boj.kr/d5e9b736ccc643fcb10a5351b836faa6 <br/>
+● 3 - J : 14497 - http://boj.kr/d5e9b736ccc643fcb10a5351b836faa6 주난이 컷~ <br/>
 ● 3 - K : 3197 - http://boj.kr/eff8e537e2a747a588d33e78d438bde0 <br/>
 ● 3 - L : 1987 - http://boj.kr/2a094e84bae14f9091e5c3078337a80f <br/>
 ● 3 - M : 2529 - http://boj.kr/f67b0fcc590a4b80b231209f2b8ce34e <br/>

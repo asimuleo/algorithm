@@ -8,8 +8,8 @@
 //#include "week-1/4375.h"
 //#include "solved_ac/marathon/8/6230.h"
 // #include "swea/d4/장훈이의높은선반.h"
-  // #include "큰돌/week-3/6230071.h"
- #include "백준/골드/1753.h"
+#include "큰돌/week-3/3197.h"
+ // #include "백준/골드/1753.h"
 
 
 //#include "solved_ac/marathon/3/3049.h"
@@ -18,7 +18,7 @@ int main() {
 
 //    solve();
 
-    p_1753();
+    p_3197();
 
 //    blockgame();
 
