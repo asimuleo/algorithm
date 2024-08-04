@@ -5,5 +5,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(untitled
         main.cpp
-        solved_ac/marathon/8/14530.h
 )
