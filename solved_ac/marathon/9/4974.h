@@ -17,4 +17,23 @@
 using namespace std;
 
 void p_4974() {
+    int n;
+    cin >> n;
+    while (n != 0) {
+        vector<int> scores(n);
+        for (int i = 0; i < n; ++i) {
+            cin >> scores[i];
+        }
+        sort(scores.begin(), scores.end());
+
+        int sum = 0;
+
+        for (int i = 1; i < scores.size() -1; ++i) {
+            sum += scores[i];
+        }
+
+        cout << sum / (scores.size() - 2) << endl;
+
+        cin >> n;
+    }
 }
