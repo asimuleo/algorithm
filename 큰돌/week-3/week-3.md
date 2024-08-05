@@ -7,10 +7,10 @@
 ● 3 - G : 12851 - http://boj.kr/6733d00393ba47a98811a8ff3eb6c643 visited의 틀을 꺠는 문제. 2일만에 풀었따..<br/>
 ● 3 - H : 13913 - http://boj.kr/69f8a56f74744fbfb766bbc5fef23a79 경로 트래킹을 위한 새로운 배열 <br/>
 ● 3 - I : 17071 - http://boj.kr/c21e35e4db3143cc9f1e809d10f6eb86 <br/>
-● 3 - J : 14497 - http://boj.kr/d5e9b736ccc643fcb10a5351b836faa6 주난이 컷~ <br/>
-● 3 - K : 3197 - http://boj.kr/eff8e537e2a747a588d33e78d438bde0 <br/>
-● 3 - L : 1987 - http://boj.kr/2a094e84bae14f9091e5c3078337a80f <br/>
-● 3 - M : 2529 - http://boj.kr/f67b0fcc590a4b80b231209f2b8ce34e <br/>
+● 3 - J : 14497 - http://boj.kr/d5e9b736ccc643fcb10a5351b836faa6 주난이 컷~ while 문 2개 쓰는 대단한 문제...<br/>
+● 3 - K : 3197 - http://boj.kr/eff8e537e2a747a588d33e78d438bde0 진짜 인간 승리... 백조는 더이상 나에게 문제가 되지 않는다!!<br/>
+● 3 - L : 1987 - http://boj.kr/2a094e84bae14f9091e5c3078337a80f dfs 쉽게 승리 <br/>
+● 3 - M : 2529 - http://boj.kr/f67b0fcc590a4b80b231209f2b8ce34e 그냥 재귀 완탐으로 쉬운 문제 <br/>
 ● 3 - N : 9934 - http://boj.kr/c8e5c1b6404343aeadec9950565be83c <br/>
 ● 3 - O : 15684 - http://boj.kr/775a01e2484049a8b9d6b975cc85cb02 <br/>
 ● 3 - P : 14620 - http://boj.kr/df51efdea3b04dcc85f9a1c2378ade31 <br/>
