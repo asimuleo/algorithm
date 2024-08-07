@@ -17,114 +17,61 @@
 
 using namespace std;
 
+// h 가 y 번 반복됨을 의미한다.
+struct hyuk {
+    int h;
+    int y;
+};
 
-int golomb(int n) {
-    int dp[n + 1];
 
-    dp[1] = 1;
-
-    // temp1 보다 작은 녀석들은 더이상 dp 에서 사용 될 일이 없지 않을까?
-
-    for (int i = 2; i <= n; ++i) {
-        dp[i] = 1 + dp[i - dp[dp[i - 1]]];
-    }
-
-    return dp[n];
-}
-
+/**
+* https://metatutor.co.uk/the-golomb-sequence/
+* 이걸 보고 golomb 수열이 뭔지 이해해버렸다.
+*/
 void p_2038() {
-    // 어떤 수가 주어졌을 때, 해당 수가 수열상에 몇번 등장하는지를 구하시요.
-    // 이 수열은 어떤 수 k 가 증가함에 따라 k 가 등장하는 횟수가 감소하지 않는 수열을 의미한다.
-    // 1이 등장하는 횟수는 1로 고정한다.
-    // 어떤수 k 에 대하여 k-1이 등장하는 횟수는 k 보다 같거나 커야 하는 수중에 제일 작은 수이다.
-    // 1,
-    // 2, 2,
-    // 3, 3,
-    // 4, 4, 4,
-    // 5, 5, 5,
-    // 6, 6, 6, 6,
-    // 7, 7, 7, 7,
-    // 8, 8, 8, 8,
-    // 9, 9, 9, 9, 9,
-    // 10, 10, 10, 10, 10,
-    // 11, 11, 11, 11, 11,
-    // 12, 12, 12, 12, 12, 12
-    // a(n) = 1;
-    // a(n + 1) = 1 + a(n + 1 - a(a(n)));
+    int n;
+    cin >> n;
+    // 포인터가 n 번째 일 때의 골룸 수열의 수를 구하자.
 
-    //
-    // for (int i = 100; i <= 200; ++i) {
-    //     cout << golomb(i) << ";" << i << endl;
-    // }
-
-    // fn   n
-    // 1	1
-    // 2	2  3
-    // 3	4  5
-    // 4	6  7  8
-    // 5	9  10 11
-    // 6	12 13 14 15
-    // 7	16 17 18 19
-    // 8	20 21 22 23
-    // 9	24 25 26 27 28
-    // 10	29 30 31 32 33
-    // 11	34 35 36 37 38
-    // 12	39 40 41 42 43 44
-    // 13	45 46 47 48 49 50
-    // 14   51 52 53 54 55 56
-    // 15   57 58 59 60 61 62
-    // 16   63 64 65 66 67 68 69
-    // 17                     76
-    // 18                     83
-    // 19                     90
-    // 20                     97         98
-    // 21    99 100 101 102 103 104 105 106
-    // 22   107                         114
-    // 23   115                         122
-    // 24   123                         130 131
-    // 25   132                     138 139 140
-    // 26                                   149
-    // 27                                   158
-    // 28                                   167
-    // 29                                   176 177
-
-
-    int N;
-    cin >> N;
-
-    if (N == 1) {
-        cout << 1;
+    if (n <= 2) {
+        cout << n;
         return;
     }
 
-    int fn = 1;
-    int n = 1;
+    deque<hyuk> golomb_sequence;
+    golomb_sequence.push_back({2, 1});
 
-    int a = 2, b = 0, c = 2, d = 0, e = 2;
+    int total_length = 2;
 
-    while (true) {
-        // 한 행을 의미
-        for (int i = 0; i < a; ++i) {
-            n++;
-            if (n == N) {
-                cout << fn + 1;
-                return;
+    int index = 3;
+
+    int ii = 0;
+
+    while (index <= n) {
+        hyuk current = golomb_sequence[ii];
+
+        // y 번 만큼 진행
+        for (int j = 0; j < current.y; ++j) {
+            golomb_sequence.push_back({index, current.h});
+            total_length += current.y;
+            if (total_length >= n) {
+                // 골롬수열에서 y 의 개수가 n 이 되는 지점의 h 를 출력한다.
+                int temp = 3;
+                golomb_sequence.pop_front();
+                if (temp >= n) {
+                    cout << golomb_sequence.back().y;
+                    return;
+                }
+                for (auto sequence: golomb_sequence) {
+                    temp += sequence.y;
+                    if (temp >= n) {
+                        cout << sequence.h;
+                        return;
+                    }
+                }
             }
+            index++;
         }
-        b++; // 한 행을 수행 했음을 의미. 수행한 횟수가 c 에 도달 한다면 a 는 증가된다. c 는 d 가 2면 증가
-        //  c 는
-        if (b == c) {
-            a++;
-            b = 0;
-            d++;
-            if (d == e) {
-                c++;
-                d = 0;
-                e++;
-            }
-        }
-        fn++;
+        ii++;
     }
-
-
 }
