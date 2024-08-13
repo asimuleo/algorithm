@@ -27,10 +27,14 @@ int N, M;
 int dx[] = {0, 1, 0, -1};
 int dy[] = {-1, 0, 1, 0};
 
-char board[1001][1001];
-int visited[1001][1001][2];
+char board[1005][1005];
+int visited[1005][1005][2];
 
 void p_2206() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
     cin >> N >> M;
     for (int i = 1; i <= N; ++i) {
         for (int j = 1; j <= M; ++j) {
@@ -45,7 +49,7 @@ void p_2206() {
     visited[1][1][1] = 1;
 
     while (!q.empty()) {
-        const point &p = q.front();
+        const point p = q.front();
         q.pop();
 
         if (p.y == N && p.x == M) {
@@ -58,17 +62,17 @@ void p_2206() {
             int ny = p.y + dy[i];
 
             if (ny < 1 || ny > N || nx < 1 || nx > M) continue;
-            if (visited[ny][nx][p.power] != -1) {
-                continue;
-            }
+
             if (board[ny][nx] == '1') {
-                if (p.power) {
+                if (p.power && visited[ny][nx][0] == -1) {
                     // 힘을 사용
                     q.push({ny, nx, false});
                     visited[ny][nx][0] = visited[p.y][p.x][p.power] + 1;
                 }
                 continue;
             }
+
+            if (visited[ny][nx][p.power] != -1) continue;
             q.push({ny, nx, p.power});
             visited[ny][nx][p.power] = visited[p.y][p.x][p.power] + 1;
         }
