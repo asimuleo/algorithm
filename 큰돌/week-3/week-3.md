@@ -11,7 +11,7 @@
 ● 3 - K : 3197 - http://boj.kr/eff8e537e2a747a588d33e78d438bde0 진짜 인간 승리... 백조는 더이상 나에게 문제가 되지 않는다!!<br/>
 ● 3 - L : 1987 - http://boj.kr/2a094e84bae14f9091e5c3078337a80f dfs 쉽게 승리 <br/>
 ● 3 - M : 2529 - http://boj.kr/f67b0fcc590a4b80b231209f2b8ce34e 그냥 재귀 완탐으로 쉬운 문제 <br/>
-● 3 - N : 9934 - http://boj.kr/c8e5c1b6404343aeadec9950565be83c <br/>
+● 3 - N : 9934 - http://boj.kr/c8e5c1b6404343aeadec9950565be83c 중위순회, (start + end) / 2 레벨화 <br/>
 ● 3 - O : 15684 - http://boj.kr/775a01e2484049a8b9d6b975cc85cb02 <br/>
 ● 3 - P : 14620 - http://boj.kr/df51efdea3b04dcc85f9a1c2378ade31 <br/>
 ● 3 - Q : 1189 - http://boj.kr/6d4fdbb2023647f3b2da2d638287a875 <br/>
