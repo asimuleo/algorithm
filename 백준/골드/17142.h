@@ -11,7 +11,7 @@
 
 using namespace std;
 
-struct point
+struct yx
 {
     int y;
     int x;
@@ -62,12 +62,12 @@ int p_17142()
             if (p[i] != 0)
             {
                 // bfs
-                queue<point> q;
+                queue<yx> q;
                 q.push({viruses[i].y, viruses[i].x});
                 visited[viruses[i].y][viruses[i].x] = 0;
                 while (!q.empty())
                 {
-                    const point u = q.front();
+                    const yx u = q.front();
                     q.pop();
                     for (int j = 0; j < 4; ++j)
                     {
