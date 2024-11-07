@@ -8,10 +8,11 @@
 //#include "solved_ac/marathon/9/2355.h"
 //#include "swea/d4/장훈이의높은선반.h"
 // #include "큰돌/week-3/9934.h"
-// #include "백준/골드/2091.h"
+ #include "백준/골드/1285.h"
 //#include "solved_ac/marathon/3/3049.h"
 
 int main() {
 
+    p_1285();
     return 0;
 }
