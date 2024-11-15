@@ -1,90 +1,66 @@
-//
-// Created by 임혁 on 24. 11. 7.
-//
-
-
-#include "iostream"
-#include "algorithm"
-#include "cstring"
+#include <iostream>
 
 using namespace std;
 
+// n 행 n 열
+int n;
+
+int board[20];
+
+int ret = 1000000000;
+
+// step == n 까지 재귀
+// 조합
+// 가능한 가로 뒤집기의 모든 경우의 수를 다 뒤집은 후에
+// base 에서 세로에 대한 최적을 구한다.
+void play(int step) {
+
+    // base
+    if (step == n) {
+        int temp = 0;
+
+        // 각 세로에 대하여 뒤집은 것과 안 뒤집은 것의 뒷면(T)의 개수 최소를 temp 에 더한다.
+        for (int i = 1; i < (1 << n); i *= 2) {
+            int t_cnt = 0;
+            for (int j = 0; j < n; j++) {
+                if (board[j] & i) t_cnt++;
+            }
+            temp += min(t_cnt, n - t_cnt);
+        }
+
+        ret = min(ret, temp);
+        return;
+    }
+
+    // 안 뒤집기
+    play(step + 1);
+
+    // 뒤집기
+    board[step] = ~board[step];
+    play(step + 1);
+
+}
+
 int main() {
 
-    // 앞면이 H
-    // 뒷면이 T
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
 
-    // N 행 N 열을 이루어 탁자 위에 놓여 있다.
-
-    // 임의의 한 행 또는 한 열에 놓인 N개의 동전을 모두 뒤집는 작업을 수행할 수 있다.
-    // T 의 개수를 최소로 하려고 한다.
-    // 이때 T 의 개수를 구하는 프로그램을 작성하시오.
-
-    int N;
-    cin >> N;
-    string board[N];
-    for (int i = 0; i < N; ++i) {
-        cin >> board[i];
+    cin >> n;
+    string str;
+    // 각 행을 한개의 숫자로 board 에 저장
+    for (int i = 0; i < n; i++) {
+        cin >> str;
+        int value = 1;
+        for (const char c : str) {
+            if (c == 'T') board[i] |= value;
+            value *= 2;
+        }
     }
 
-    // N 은 20개 까지 가능하다.
-    // 2^^20 에 대하여 정답을 구할 때 더 이득인 쪽으로 정답을 구하면 되지 않나?
-    // 행 또는 열이 정해진 상태에서 그 반대의 값은 항상 최적의 선택 하나 밖에 없다.
-    // 그 최적의 선택은 그리디 하게 구할 수 있을 것 같다.
-    // 즉 2 ^^ 20, 각각의 행 또는 열을 뒤집을지 말지를 결정만 하면 끝날 것 같다.
-    // 0 부터 1 << 20 - 1 까지 진행한다
-
-
-    int ret = 401;
-
-    // 모든 조합을 진행한다.
-    for (int i = 0; i < (1 << N); ++i) {
-
-        // 이번 조합에서 T 의 개수
-        int temp_cnt_t = 0;
-
-        // 이번 조합에서 쓸 보드
-        string temp_board[N];
-        for (int j = 0; j < N; ++j) {
-            temp_board[j] = board[j];
-        }
-
-        // 이번 조합의 보드를 채운다
-        for (int j = 0; j < N; ++j) {
-            if ((1 << j) & i) {
-                // 이 행은 뒤집는다.
-                for (int k = 0; k < N; ++k) {
-                    temp_board[j][k] = board[j][k] == 'H' ? 'T' : 'H';
-                }
-            } else {
-                // 이 행은 그대로 진행한다.
-                for (int k = 0; k < N; ++k) {
-                    temp_board[j][k] = board[j][k];
-                }
-            }
-        }
-
-        // 열에서 T의 개수를 세서 max(N - T, T) 를 더한다.
-        for (int j = 0; j < N; ++j) {
-
-            int temp_col_cnt_t = 0;
-
-            for (int k = 0; k < N; ++k) {
-                if (temp_board[k][j] == 'T') {
-                    temp_col_cnt_t++;
-                }
-            }
-
-            temp_cnt_t += min(N - temp_col_cnt_t, temp_col_cnt_t);
-        }
-
-        ret = min(ret, temp_cnt_t);
-
-    }
-
+    play(0);
     cout << ret;
 
-
     return 0;
-
 }
